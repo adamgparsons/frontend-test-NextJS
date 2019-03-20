@@ -14,7 +14,7 @@ const Hero = () => (
         }
         @media screen and (max-width: 550px) {
           section {
-            padding: 200px 0;
+            padding: 200px;
           }
         }
       `}

@@ -1,5 +1,35 @@
+import styled from "styled-components";
+
+const HeroLogoContainer = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+
+  h1 {
+    font-size: 4.5rem;
+    line-height: 6.125rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 6px;
+    color: white;
+    margin: 0;
+    padding-left: 1rem;
+  }
+
+  @media screen and (max-width: 550px) {
+    svg {
+      width: 52px;
+    }
+    h1 {
+      font-size: 2.625rem;
+      padding-left: 0.5rem;
+    }
+  }
+`;
+
 const HeroLogo = () => (
-  <div className="HeroLogoContainer">
+  <HeroLogoContainer>
     <svg
       title="Basement logo"
       width="83"
@@ -16,37 +46,7 @@ const HeroLogo = () => (
       />
     </svg>
     <h1>Basement</h1>
-    <style jsx>
-      {`
-        .HeroLogoContainer {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          margin: 0 auto;
-        }
-        h1 {
-          font-size: 4.5rem;
-          line-height: 6.125rem;
-          font-weight: 700;
-          text-transform: uppercase;
-          letter-spacing: 6px;
-          color: white;
-          margin: 0;
-          padding-left: 1rem;
-        }
-
-        @media screen and (max-width: 550px) {
-          svg {
-            width: 52px;
-          }
-          h1 {
-            font-size: 2.625rem;
-            padding-left: 0.5rem;
-          }
-        }
-      `}
-    </style>
-  </div>
+  </HeroLogoContainer>
 );
 
 export default HeroLogo;
