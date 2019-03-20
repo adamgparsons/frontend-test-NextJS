@@ -1,37 +1,22 @@
-import Link from "next/link";
+import Layout from "../components/Layout";
 
-function Index() {
-  return (
-    <section>
-      <nav>
-        <li>
-          <Link href="#">
-            <a>Product</a>
-          </Link>
-        </li>
-        <li>
-          <Link href="#">
-            <a>About</a>
-          </Link>
-        </li>
-        <li>
-          <Link href="#">
-            <a>Portfolio</a>
-          </Link>
-        </li>
-        <li>
-          <Link href="#">
-            <a>Team</a>
-          </Link>
-        </li>
-        <li>
-          <Link href="#">
-            <a>Contact</a>
-          </Link>
-        </li>
-      </nav>
-    </section>
-  );
-}
+const Index = () => (
+  <div>
+    <Layout />
+    <style jsx global>
+      {`
+        body {
+          @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,700");
+          font-family: "Open Sans", sans-serif;
+          line-height: 1.625rem;
+          font-weight: 400;
+          letter-spacing: 0.3px;
+          color: #b2b2b2;
+          margin: 0;
+        }
+      `}
+    </style>
+  </div>
+);
 
 export default Index;
