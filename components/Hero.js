@@ -1,25 +1,21 @@
 import TopNav from "../components/TopNav";
 import HeroLogo from "./HeroLogo";
+import styled from "styled-components";
 
-const Hero = () => (
-  <section>
-    <TopNav />
-    <HeroLogo />
-
-    <style jsx>
-      {`
-        section {
-          background: radial-gradient(#585858, #333333);
-          padding: 240px 0;
-        }
-        @media screen and (max-width: 550px) {
+const HeroContainer = styled.section`
+  background: radial-gradient(#585858, #333333);
+  padding: 240px 0;
+  @media (max-width: 550px) {
           section {
             padding: 200px;
-          }
-        }
-      `}
-    </style>
-  </section>
+          };
+`;
+
+const Hero = () => (
+  <HeroContainer>
+    <TopNav />
+    <HeroLogo />
+  </HeroContainer>
 );
 
 export default Hero;
