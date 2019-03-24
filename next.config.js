@@ -1,6 +1,8 @@
+const isProd = (process.env.NODE_ENV || "production") === "production";
+
 module.exports = {
-  // some configuration
-  assetPrefix:
-    process.env.NODE_ENV === "production" ? "/{frotend-test-NextJS" : ""
-  // another configuration
+  exportPathMap: () => ({
+    "/": { page: "/" }
+  }),
+  assetPrefix: isProd ? "/frontend-test-NextJS" : ""
 };
